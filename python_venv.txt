@@ -1,0 +1,65 @@
+-------------------------------------------
+
+JSON http response format
+  https://github.com/omniti-labs/jsend
+
+Install Flask on Ubuntu:
+  https://linuxize.com/post/how-to-install-flask-on-ubuntu-20-04/
+
+Add directory to PATH:
+  https://linuxize.com/post/how-to-add-directory-to-path-in-linux/
+
+-------------------------------------------
+VIRTUAL ENVIRONMENT
+
+Criar:
+  virtualenv -p /usr/bin/python3 venv
+
+Ativar:
+  source venv/bin/activate
+
+-------------------------------------------
+PIP + REQUEREMENTS: 
+  https://note.nkmk.me/en/python-pip-install-requirements/
+
+Na máquina que já tiver o venv com os pacotes instalados:
+pip freeze > requirements.txt       (arquivo com versões do venv atual)
+
+Quando for usar em outra máquina:
+pip install -r requirements.txt             (instala exatamente aqueles pacotes)
+
+OBS: desta forma, não precisa subir o venv para o repositório
+
+-------------------------------------------
+FLASK: INSTALL
+
+pip install flask
+
+If Flask is not on PATH:
+
+echo $PATH                                       (check path)
+export PATH="/home/marcos/.local/bin:$PATH"      (add Flask to PATH)
+
+-------------------------------------------
+VENV WINDOWS 10
+https://www.youtube.com/watch?v=ii1zfI-gTv4
+
+creating 	python -m venv venv (in project folder)
+activating	venv\Scripts\activate.bat
+listing		pip list
+saving		pip freeze > requirements.txt
+restoring	pip install -r requirements.txt
+deactivating	deactivate
+
+-------------------------------------------
+FLASK: RUN
+
+Flask 2.0.3
+$ FLASK_ENV=development flask run
+
+Flash 2.2.X
+$ flask --app app run
+$ flask --app app --debug run
+
+
+Caso queira acessar de outras máquinas, usar --host=0.0.0.0
